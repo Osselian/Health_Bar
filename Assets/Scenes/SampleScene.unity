@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -273, y: -185}
+  m_AnchoredPosition: {x: -99.1, y: -185}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7819579
@@ -206,8 +206,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1369135068}
-        m_TargetAssemblyTypeName: HitButton, Assembly-CSharp
+      - m_Target: {fileID: 1578837958}
+        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
         m_MethodName: OnHitButtonClick
         m_Mode: 1
         m_Arguments:
@@ -367,7 +367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273, y: -185}
+  m_AnchoredPosition: {x: 88.5, y: -185}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335544116
@@ -414,8 +414,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1369135063}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+      - m_Target: {fileID: 1578837958}
+        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
         m_MethodName: OnHealButtonClick
         m_Mode: 1
         m_Arguments:
@@ -770,7 +770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626cf77bda95ce84fa64b89755a973dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthBar: {fileID: 1578837956}
 --- !u!114 &1369135064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,7 +865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c35525f4a78d0448cb373ff701e92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthBar: {fileID: 1578837956}
 --- !u!1 &1578837955
 GameObject:
   m_ObjectHideFlags: 0
