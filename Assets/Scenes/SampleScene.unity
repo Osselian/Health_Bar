@@ -206,8 +206,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1578837958}
-        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
+      - m_Target: {fileID: 1369135063}
+        m_TargetAssemblyTypeName: HitButton, Assembly-CSharp
         m_MethodName: OnHitButtonClick
         m_Mode: 1
         m_Arguments:
@@ -414,8 +414,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1578837958}
-        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
+      - m_Target: {fileID: 1369135068}
+        m_TargetAssemblyTypeName: HealButton, Assembly-CSharp
         m_MethodName: OnHealButtonClick
         m_Mode: 1
         m_Arguments:
@@ -767,9 +767,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1369135062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 626cf77bda95ce84fa64b89755a973dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e7bc0511ec9a0448abd836e3151b734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthBar: {fileID: 1578837958}
 --- !u!114 &1369135064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,9 +863,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1369135062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c35525f4a78d0448cb373ff701e92c, type: 3}
+  m_Script: {fileID: 11500000, guid: 001045f8c0ed3484bbcd07712fa863eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthBar: {fileID: 1578837958}
 --- !u!1 &1578837955
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,9 +930,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 196752030}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
