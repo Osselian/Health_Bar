@@ -7,33 +7,33 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
+    [SerializeField] private Player _player;
+
     private Slider _healthBar;
-    private float _valueChangeDelta;
-    private float _targetValue;
-    private float _maxDelta = 0.05f;
+    private float _newValue;
+    private float _maxDelta = 0.1f;
     private Coroutine _changeValueJob;
 
     private void Start()
     {
         _healthBar = GetComponent<Slider>();
-        _targetValue = _healthBar.value;
+        _healthBar.value = _player.GetHealth();
     }
 
-    public void ChangeValue(int valueChangeDelta)
+    public void ShowValue()
     {
         if (_changeValueJob != null)
             StopCoroutine(_changeValueJob);
-        
-        _valueChangeDelta = valueChangeDelta;
-        _targetValue = _targetValue + _valueChangeDelta;
+
+        _newValue = _player.GetHealth();
         _changeValueJob = StartCoroutine(ChangeValueJob());
     }
 
     private IEnumerator ChangeValueJob()
     {
-        while (_healthBar.value != _targetValue)
+        while (_healthBar.value != _newValue)
         {
-            _healthBar.value = Mathf.MoveTowards(_healthBar.value, _targetValue, _maxDelta);
+            _healthBar.value = Mathf.MoveTowards(_healthBar.value, _newValue, _maxDelta);
             yield return null;
         }
     }

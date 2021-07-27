@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class HitButton : MonoBehaviour
 {
-    [SerializeField] private HealthBar _healthBar;
+    [SerializeField] private Player _player;
 
-    private int _damageAmount = -10;
-
+    private int _damageAmount = 10;
 
     public void OnHitButtonClick()
     {
-        _healthBar.ChangeValue(_damageAmount);
+        _player.GetDamage(_damageAmount);
     }
 }

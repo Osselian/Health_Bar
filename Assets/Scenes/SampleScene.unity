@@ -579,6 +579,51 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &436855945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 436855947}
+  - component: {fileID: 436855946}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &436855946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436855945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b289cf1d0085944b14f72b09163437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 50
+  _healthBar: {fileID: 1578837958}
+--- !u!4 &436855947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436855945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5935031, y: -1.1063641, z: -16.000786}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,7 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7bc0511ec9a0448abd836e3151b734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthBar: {fileID: 1578837958}
+  _player: {fileID: 436855946}
 --- !u!114 &1369135064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001045f8c0ed3484bbcd07712fa863eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthBar: {fileID: 1578837958}
+  _player: {fileID: 436855946}
 --- !u!1 &1578837955
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +924,7 @@ GameObject:
   - component: {fileID: 1578837956}
   - component: {fileID: 1578837958}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,6 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b900d0502f5d54e96aba8fc36b5d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 436855946}
 --- !u!1 &1850738333
 GameObject:
   m_ObjectHideFlags: 0

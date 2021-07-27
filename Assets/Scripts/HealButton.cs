@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class HealButton : MonoBehaviour
 {
-    [SerializeField] private HealthBar _healthBar;
+    [SerializeField] private Player _player;
 
     private int _healAmount = 10;
 
     public void OnHealButtonClick()
     {
-        _healthBar.ChangeValue(_healAmount);
+        _player.Heal(_healAmount);
     }
 }
