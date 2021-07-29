@@ -14,13 +14,19 @@ public class HealthBar : MonoBehaviour
     private float _maxDelta = 0.1f;
     private Coroutine _changeValueJob;
 
-    private void Start()
+    private void OnEnable()
     {
         _healthBar = GetComponent<Slider>();
+        _player.HealthChanged += OnHealthChange;
         _healthBar.value = _player.GetHealth();
     }
 
-    public void ShowValue()
+    private void OnDisable()
+    {
+        _player.HealthChanged -= OnHealthChange;
+    }
+
+    public void OnHealthChange()
     {
         if (_changeValueJob != null)
             StopCoroutine(_changeValueJob);
