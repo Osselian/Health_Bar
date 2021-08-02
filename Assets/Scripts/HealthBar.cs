@@ -26,12 +26,12 @@ public class HealthBar : MonoBehaviour
         _player.HealthChanged -= OnHealthChange;
     }
 
-    public void OnHealthChange()
+    public void OnHealthChange(int currentHealth)
     {
         if (_changeValueJob != null)
             StopCoroutine(_changeValueJob);
 
-        _newValue = _player.GetHealth();
+        _newValue = currentHealth;
         _changeValueJob = StartCoroutine(ChangeValueJob());
     }
 
